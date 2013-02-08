@@ -1,9 +1,12 @@
 <% provide(:title, 'Home') %>
 <% counter=0 %>
 <% @ksprojs.each do |project| %>
-  <div class="info">
+  <div class="project">
     <div class="ranking">
       <%= counter+=1 %>
+    </div>
+    <div class="category">
+      <%= Project.where(handle: project.handle).first.category %>
     </div>
     <% if counter%2==0 %>
       <div class="ksthumb pull-left">
@@ -22,14 +25,16 @@
 	</div>
       </div>
       <dd class="info-desc">
-	<%= project.description %>
+	      <%= project.description.scrub!(:strip) %>
       </dd>
     </dl>
     <div class="review">
       <h3 class="review-title">
 	Review
       </h3>
-      render
+      <div class="review-comments">
+	<i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+      </div>
     </div>
   </div>
 <% end %>

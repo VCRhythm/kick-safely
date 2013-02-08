@@ -1,5 +1,15 @@
 class StaticPagesController < ApplicationController
   def home
+    @ksprojs = Kickstarter.by_list(:popular, :page=>1, :pages=>1)
+    @projects = Project.all
+    @ksprojs.each do |project|
+     if !Project.exists?(handle: project.handle)
+       doc=Nokogiri::HTML(open("http://www.kickstarter.com/projects/#{project.handle}"))
+       cat=doc.css('.category')
+       subcat=cat.text
+       Project.create(handle: project.handle, category: cat[0]["data-project-parent-category"])
+     end 
+    end
   end
 
   def about

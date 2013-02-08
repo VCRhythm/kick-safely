@@ -1,7 +1,6 @@
 # == Schema Information
 #
-# T:browse confirm e
-# able name: comments
+# Table name: comments
 #
 #  id         :integer          not null, primary key
 #  content    :string(255)
