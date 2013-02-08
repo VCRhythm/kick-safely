@@ -1,5 +1,35 @@
-<div class="center hero-unit">
-	<h1>Welcome</h1>
-	<h2>Hello</h2>
-	<%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
-</div>
+<% provide(:title, 'Home') %>
+<% counter=0 %>
+<% @ksprojs.each do |project| %>
+  <div class="info">
+    <div class="ranking">
+      <%= counter+=1 %>
+    </div>
+    <% if counter%2==0 %>
+      <div class="ksthumb pull-left">
+    <% else %>
+      <div class="ksthumb pull-right">
+    <% end %>
+      <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
+      <%= project.pledge_percent %>%
+    </div>
+    <dl class="info">
+      <div class="info-header">
+	<dt class="info-title">
+	  <strong><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></strong>
+	</dt>
+	<div class="info-medals">
+	</div>
+      </div>
+      <dd class="info-desc">
+	<%= project.description %>
+      </dd>
+    </dl>
+    <div class="review">
+      <h3 class="review-title">
+	Review
+      </h3>
+      render
+    </div>
+  </div>
+<% end %>
