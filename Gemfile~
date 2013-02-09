@@ -9,6 +9,7 @@ gem 'bootstrap-sass'
 
 group :development do
   gem 'sqlite3'
+  gem 'loofah'
 end
 
 # Gems used only for assets and not required

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'kickstarter'
+gem 'kickstarter', :path => 'vendor/cache/kickstarter'
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
@@ -9,7 +9,6 @@ gem 'bootstrap-sass'
 
 group :development do
   gem 'sqlite3'
-  gem 'loofah'
 end
 
 # Gems used only for assets and not required

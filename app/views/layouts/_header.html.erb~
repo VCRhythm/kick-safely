@@ -1,11 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Kick Safely", 'root_path', id: "logo" %>
+      <%= link_to "Kick Safer", root_path, id: "logo" %>
       <nav>
-        <ul class="nav nav-list pull-right">
-	  <li class="active"><i class="icon-home icon-white"></i><%= link_to "Home",    root_path %></li>
-          <li><%= link_to "About",   about_path %></li>
+        <ul class="nav pull-right">
+          <li><%= link_to "About", about_path %></li>
+	  <li><%= link_to "Ratings", "#" %></li>
+	  <li><%= link_to bp_path, class: "dropdown-toggle", data: {toggle: "dropdown"} do %> 
+		  Best Practices<b class="caret"></b> 
+	  <% end %></li>
           <li><%= link_to "Sign in", '#' %></li>
         </ul>
       </nav>

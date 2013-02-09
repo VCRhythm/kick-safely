@@ -1,0 +1,41 @@
+<% counter=0 %>
+<% @projects.each do |project| %>
+
+  <div class="project alert alert-info">
+    <div class="ranking">
+      <%= counter+=1 %>
+    </div>
+    <div class="category">
+      <%= project.category %>
+    </div>
+    <% if counter%2==0 %>
+      <div class="ksthumb pull-left">
+    <% else %>
+      <div class="ksthumb pull-right">
+    <% end %>
+      <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
+      <%= project.pledge_percent %>%
+    </div>
+    <dl class="info">
+      <div class="info-header">
+	<dt class="info-title">
+	  <strong><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></strong>
+	</dt>
+	<div class="info-medals">
+		<span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span>
+	</div>
+      </div>
+      <dd class="info-desc">
+	      <%= project.description %>
+      </dd>
+    </dl>
+    <div class="review">
+      <h3 class="review-title">
+	Review
+      </h3>
+      <div class="review-comments">
+	<i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+      </div>
+    </div>
+  </div>
+<% end %>

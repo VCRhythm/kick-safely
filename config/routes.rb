@@ -2,7 +2,9 @@ Kicksafely::Application.routes.draw do
   root to: 'static_pages#home'
 	
   match '/about',	to: 'static_pages#about'
-
+  match '/bp', 		to: 'static_pages#bp'
+  match '/bp-backers',	to: 'static_pages#bp-backers'
+  match '/bp-creator',	to: 'static_pages#bp-creators'
   resources :users
 
   resources :comments

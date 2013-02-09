@@ -1,8 +1,11 @@
 <% provide(:title, 'Home') %>
+<div class="page-header">
+	<h1>Kick Safer <small>Empowering Decision</small></h1>
+</div>
 <% counter=0 %>
 <% @projects.each do |project| %>
 
-  <div class="project">
+  <div class="project alert alert-info">
     <div class="ranking">
       <%= counter+=1 %>
     </div>
@@ -23,6 +26,7 @@
 	  <strong><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></strong>
 	</dt>
 	<div class="info-medals">
+		<span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span>
 	</div>
       </div>
       <dd class="info-desc">

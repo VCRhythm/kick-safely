@@ -7,10 +7,11 @@
 	<%= csrf_meta_tags %>
 	<%= render 'layouts/shim' %>
 </head>
-<body>
+<body onload="<%= $.post({url: {action: :get_content_to_display}) %>">
 	<%= render 'layouts/header' %>
 	<div class="container">
-	  <%= yield %>
+		<%= yield %>
+		<%= render 'layouts/footer' %>
   	</div>
 </body>
 </html>
