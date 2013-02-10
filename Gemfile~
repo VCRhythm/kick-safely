@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'kickstarter'
+gem 'kickstarter', :path => 'vendor/cache/kickstarter'
 gem 'bootstrap-sass'
+gem 'boostrap-progressbar'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
   gem 'sqlite3'
-  gem 'loofah'
 end
 
 # Gems used only for assets and not required

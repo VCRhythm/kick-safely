@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 section {
@@ -54,9 +54,52 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  }
+
+/* page */
+
+.progress {
+  margin-bottom:0;
 }
 
+.bar{
+text-align:left;
+padding-left:20px;
+}
 
+.project{
+  border: solid 1px black;
+  margin-bottom:10px;
+}
+.info-title h2{
+  margin-bottom:10px;
+}
+.category
+  {
+  font-weight:bold;
+  }
+
+.ranking{
+  font-weight:bold;
+ }  
+
+.ksthumb{
+  text-align:center;
+  p{
+    margin:0;
+  }
+}
+.pledge-percent{
+  text-align:center;
+}
+.info{
+
+  }
+.review{
+  text-align:center;
+
+}
+  
 /* header */
 
 #logo {

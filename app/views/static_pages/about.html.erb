@@ -1,3 +1,16 @@
 <% provide(:title, 'About') %>
-<h1>About</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<h1>More data so you can Kick Safer.</h1>
+<p>
+Our goal is to empower everyone who uses the Kickstarter platform.
+</p>
+<h3>Made for Backers.</h3>
+<p>
+Our review team provides additional data points so that you
+</p>
+<h3>Made for Projct Creators.</h3>
+<p>
+</p>
+<% mail_content = capture do %>
+	<%= image_tag "TTHsign.png", class: "signature" %>
+<% end %>
+<%= mail_to TTH_EMAIL, mail_content %>

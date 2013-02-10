@@ -1,40 +1,36 @@
 <% provide(:title, 'Home') %>
-<div class="page-header">
-	<h1>Kick Safer <small>Empowering Decision</small></h1>
-</div>
 <% counter=0 %>
 <% @projects.each do |project| %>
-
-  <div class="project alert alert-info">
-    <div class="ranking">
-      <%= counter+=1 %>
-    </div>
-    <div class="category">
-      <%= project.category %>
-    </div>
-    <% if counter%2==0 %>
-      <div class="ksthumb pull-left">
-    <% else %>
-      <div class="ksthumb pull-right">
-    <% end %>
-      <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
-      <%= project.pledge_percent %>%
-    </div>
-    <dl class="info">
-      <div class="info-header">
-	<dt class="info-title">
-	  <strong><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></strong>
-	</dt>
-	<div class="info-medals">
-		<span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span>
-	</div>
+  <div class="row-fluid project alert alert-info">
+    <div class="span1">
+      <div class="ranking">
+	<%= counter+=1 %>
       </div>
-      <dd class="info-desc">
-	      <%= project.description %>
-      </dd>
-    </dl>
-    <div class="review">
-      <h3 class="review-title">
+      <div class="category">
+        <%= project.category %>
+      </div>
+    </div>
+    <div class="span3 ksthumb">
+      <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
+      <p><%= project.pledge_percent %>%</p><div class="progress"><div class="bar" style="width: <%= project.pledge_percent %>%"></div></div>
+    </div>
+    <div class="span5 info">
+      <dl>
+        <div class="info-header">
+          <dt class="info-title">
+	    <h2><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></h2>
+	  </dt>
+          <div class="info-medals">
+            <span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span>
+          </div>
+        </div>
+        <dd class="info-desc">
+	  <%= project.description %>
+        </dd>
+      </dl>
+    </div>
+    <div class="span3 review">
+      <h5 class="review-title">
 	Review
       </h3>
       <div class="review-comments">

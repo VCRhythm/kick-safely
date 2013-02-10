@@ -1,7 +1,5 @@
 <footer class="footer">
-  <small>
-    Tristan T. Hardy
-  </small>
+  <a href="mailto:tristan@tristanhardy.com"><small>Tristan T. Hardy</small></a>
   <nav>
     <ul>
       <li><%= link_to "About",   about_path %></li>
