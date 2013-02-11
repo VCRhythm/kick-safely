@@ -1,16 +1,53 @@
 <% provide(:title, 'About') %>
-<h1>More data so you can Kick Safer.</h1>
-<p>
-Our goal is to empower everyone who uses the Kickstarter platform.
+<h1>More Data So You Can Kick Safer.</h1>
+	<p>
+Our goal is to empower everyone who uses the Kickstarter platform. We're not trying to dissuade competitive decision making. The great part about Kickstarter is that projects succeed entirely on the signals they send to potential backers. It's all up to the community to determine which projects live or die.
 </p>
-<h3>Made for Backers.</h3>
-<p>
-Our review team provides additional data points so that you
-</p>
-<h3>Made for Projct Creators.</h3>
-<p>
-</p>
+<div class="accordian" id="accordian2">
+	<div class="accordian-group">
+		<div class="accordian-heading">
+			<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapse0ne">
+				<h3>Made for Backers. -></h3>
+			</a>
+		</div>
+		<div id="collapse0ne" class="accordian-body collapse">
+			<div class="accordian-inner">
+				<p>
+				Kickstarter isn't a store front. They've made that perfectly clear. If you decide to back a project, there's no guarantee that the reward you are claiming based on your contribution will ever come to fruition.
+				</p>
+				<p>
+				However, our review team can provide you additional data points so that you can understand the logic behind which promises a project creator will likely be able to keep. We examine common factors that have led to historically favorable outcomes for Kickstarter projects. And our review process will only get better as more projects succeed.
+				</p>
+				<p>
+				Clearly, just because our team indicates the existence of certain success factors in a particular project, backers should be aware that the project may still fail. Our team bases their review on publicly available information from a creator's project site and can not verify the validity or comprehensiveness of this information.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="accordian-group">
+		<div class="accordian-heading">
+			<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseTwo">
+				<h3>Made for Project Creators. -></h3>
+			</a>
+		</div>
+		<div id="collapseTwo" class="accordian-body collapse">
+			<div class="accordian-inner">
+			</div>
+		</div>
+	</div>
+</div>
+
+<p> So whether you're trying to maximize your potential reward, sorting out if a creator's claim is legitimate, or simply looking for another way to sift through the many great projects on the site, you should check out the advice of our review team. We're always looking to improve and welcome any feedback to make our data even more useful! Our figurative door is always open.</p>
+<div style="text-align:center;"
+<p>-Tristan</p>
 <% mail_content = capture do %>
 	<%= image_tag "TTHsign.png", class: "signature" %>
 <% end %>
 <%= mail_to TTH_EMAIL, mail_content %>
+</div>
+<script>
+$('.collapse').collapse({
+  toggle: false;
+})
+
+</script>

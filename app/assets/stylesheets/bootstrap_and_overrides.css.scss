@@ -2,8 +2,9 @@
 
 /* mixins, variables, etc. */
 
+$medOrange: #FF9900;
+$medBlue: #39AECF;
 $grayMediumLight: #eaeaea;
-$grayLight: #61B7CF;
 
 /* universal */
 
@@ -11,9 +12,14 @@ html {
   overflow-y: scroll;
 }
 
+a{
+&:hover{
+background-color:transparent;
+}}
+
 body {
-  padding-top: 50px;
-}
+  padding-top: 50px; 
+  }
 
 section {
   overflow: auto;
@@ -56,7 +62,7 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
   }
-
+  
 /* page */
 
 .progress {
@@ -107,14 +113,15 @@ padding-left:20px;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $medBlue;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: $medOrange;
+    background-color: transparent;
     text-decoration: none;
   }
 }
@@ -125,7 +132,8 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: $grayMediumLight;
+  background-color: $medOrange;
   a {
     color: $gray;
     &:hover { 
@@ -145,3 +153,12 @@ footer {
   }
 }
 
+/* Java styles */
+  
+a.accordian-toggle{
+  color:$grayDarker;
+  &:hover {
+    color: $medOrange;
+    text-decoration: none;
+  }
+}
