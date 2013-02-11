@@ -10,9 +10,6 @@ class StaticPagesController < ApplicationController
      end 
     end
     @projects = Project.all
-    render :update do |page|
-	    page.replace_html "display_ajax", partial: '_ks.html.erb'
-    end
  end
   
   def bp

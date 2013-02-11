@@ -1,3 +1,9 @@
+PATH
+  remote: kickstarter
+  specs:
+    kickstarter (0.0.3)
+      nokogiri
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -50,15 +56,13 @@ GEM
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.7.6)
-    kickstarter-tth (0.0.4)
-      nokogiri
+    json (1.7.7)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    multi_json (1.5.0)
+    multi_json (1.5.1)
     nokogiri (1.5.6-x86-mingw32)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
@@ -115,7 +119,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 3.2.1)
   jquery-rails
-  kickstarter-tth
+  kickstarter!
   pg
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)
