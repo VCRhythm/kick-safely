@@ -119,7 +119,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 3.2.1)
   jquery-rails
-  kickstarter!
+  kickstarter (= 0.0.3)!
   pg
   rails (= 3.2.1)
   sass-rails (~> 3.2.3)

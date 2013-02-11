@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'kickstarter-grab', require: 'kickstarter-grab', path: 'vendor/cache/kickstarter'
+gem 'kickstarter', '0.0.3', require: 'kickstarter', path: 'vendor/cache/kickstarter'
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
