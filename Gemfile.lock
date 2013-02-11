@@ -1,5 +1,5 @@
 PATH
-  remote: C:/Sites/kicksafely/kickstarter
+  remote: C:/Sites/kicksafely/vendor/cache/kickstarter
   specs:
     kickstarter (0.0.3)
       nokogiri
