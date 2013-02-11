@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'kickstarter', path: 'C:/Sites/kicksafely/vendor/cache/kickstarter'
+gem 'kickstarter', :git => 'git://github.com/VCRhythm/kickstarter.git' 
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
