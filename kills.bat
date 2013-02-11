@@ -1,0 +1,1 @@
+del "C:\Sites\kicksafely\tmp\pids\server.pid"
