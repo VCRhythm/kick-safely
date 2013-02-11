@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'kickstarter', path: 'C:\Sites\kicksafely\kickstarter'
+gem 'kickstarter', path: 'C:/Sites/kicksafely/kickstarter'
 gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
@@ -25,6 +25,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'thin'
 end
 gem 'jquery-rails'
 
