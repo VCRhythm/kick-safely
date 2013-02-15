@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/VCRhythm/kickstarter.git
-  revision: ca57f114aedc5b2bae593fb1c8d855968919e2b2
+  revision: 92f14b8f07dbbc30dfc318d2a177e17067b9db88
   specs:
     kickstarter (0.0.3)
       nokogiri
@@ -65,7 +65,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.21)
-    multi_json (1.5.1)
+    multi_json (1.6.1)
     nokogiri (1.5.6-x86-mingw32)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
