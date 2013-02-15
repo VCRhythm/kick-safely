@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
 	   if video[0]["data-has-video"]=="true"
 		   hasvid=true
 	   end
-       localproject=Project.create(name: project.name, description: project.description, thumbnail_url: project.thumbnail_url, owner:project.owner, pledge_percent: project.pledge_percent, handle: project.handle, category: cat[0]["data-project-parent-category"], score:0, video:hasvid)
+       localproject=Project.create(name: project.name, description: project.description, thumbnail_url: project.thumbnail_url, owner:project.owner, pledge_percent: project.pledge_percent, handle: project.handle, category: cat[0]["data-project-parent-category"], video:true)
 	 else
 	   if !localproject.video 
 		   doc=Nokogiri::HTML(open("http://www.kickstarter.com/projects/#{project.handle}"))
