@@ -12,6 +12,8 @@
 #  thumbnail_url  :string(255)
 #  pledge_percent :integer
 #  description    :text
+#  score          :integer
+#  video          :boolean
 #
 
 require 'test_helper'

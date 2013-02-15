@@ -1,5 +1,5 @@
 <% provide(:title, 'About') %>
-<h1>More data so you can Kick Safer.</h1>
+<h1>More Data So You Can Kick Safer.</h1>
 	<p>
 Our goal is to empower everyone who uses the Kickstarter platform. We're not trying to dissuade competitive decision making. The great part about Kickstarter is that projects succeed entirely on the signals they send to potential backers. It's all up to the community to determine which projects live or die.
 </p>
@@ -7,7 +7,7 @@ Our goal is to empower everyone who uses the Kickstarter platform. We're not try
 	<div class="accordian-group">
 		<div class="accordian-heading">
 			<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapse0ne">
-				<h3>Made for Backers.</h3>
+				<h3>Made for Backers. -></h3>
 			</a>
 		</div>
 		<div id="collapse0ne" class="accordian-body collapse">
@@ -27,27 +27,28 @@ Our goal is to empower everyone who uses the Kickstarter platform. We're not try
 	<div class="accordian-group">
 		<div class="accordian-heading">
 			<a class="accordian-toggle" data-toggle="collapse" data-parent="#accordian2" href="#collapseTwo">
-				<h3>Made for Project Creators.</h3>
+				<h3>Made for Project Creators. -></h3>
 			</a>
 		</div>
 		<div id="collapseTwo" class="accordian-body collapse">
 			<div class="accordian-inner">
+				<p>Project creators are in it together. We want you to leverage what others have learned without having to make the same mistakes along the way. Our team conducts follow-up activities and tracks the progress of projects to see where you could use a little advice from soneone who's been there; done that.</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 <p> So whether you're trying to maximize your potential reward, sorting out if a creator's claim is legitimate, or simply looking for another way to sift through the many great projects on the site, you should check out the advice of our review team. We're always looking to improve and welcome any feedback to make our data even more useful! Our figurative door is always open.</p>
-<p>-Tristan
-</p>
+<div style="text-align:center;"
+<p>-Tristan</p>
 <% mail_content = capture do %>
 	<%= image_tag "TTHsign.png", class: "signature" %>
 <% end %>
 <%= mail_to TTH_EMAIL, mail_content %>
-
+</div>
 <script>
 $('.collapse').collapse({
-  toggle: true
+  toggle: false;
 })
 
 </script>

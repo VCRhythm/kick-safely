@@ -1,7 +1,16 @@
 <% provide(:title, 'Home') %>
 <% counter=0 %>
 <% @projects.each do |project| %>
-  <div class="row-fluid project alert alert-info">
+	<% case project.score %>
+		<% when 4 %>
+			<div class="row-fluid project alert alert-success">
+		<% when 3 %>
+			<div class="row-fluid project alert alert-warning">
+		<% when 2 %>
+			<div class="row-fluid project alert alert-info">
+		<% when 0..1 %>
+			<div class="row-fluid project alert alert-error">
+	<% end %>
     <div class="span1">
       <div class="ranking">
 	<%= counter+=1 %>
@@ -14,14 +23,22 @@
       <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
       <p><%= project.pledge_percent %>%</p><div class="progress"><div class="bar" style="width: <%= project.pledge_percent %>%"></div></div>
     </div>
-    <div class="span5 info">
+	<div class="info span5">	
       <dl>
         <div class="info-header">
           <dt class="info-title">
 	    <h2><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></h2>
 	  </dt>
           <div class="info-medals">
-            <span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span><span class="badge">1</span>
+			  <% if project.video %>
+				  <span class="badge">Vid</span>
+			  <% end %>
+			  <% if project.featured %>
+				  <span class="badge">Feat</span>
+			  <% end %>
+			  <% if project.pledge_percent<=200 %>
+				  <span class="badge">Budg</span>
+			  <% end %>
           </div>
         </div>
         <dd class="info-desc">
@@ -30,11 +47,12 @@
       </dl>
     </div>
     <div class="span3 review">
-      <h5 class="review-title">
-	Review
+      <h3 class="review-title">
+		  Review
       </h3>
       <div class="review-comments">
-	<i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+	      <p><%= project.score %></p>
+		  <i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
       </div>
     </div>
   </div>
