@@ -30,7 +30,7 @@ class StaticPagesController < ApplicationController
      Factor.all.each do |factor|
        case factor.name
 	   when "budget"
-		   if project.pledge_percent<=200 
+		   if project.pledge_percent<1000 
 			   localproject.score+=factor.effect
 		   end
 	   when "video"
