@@ -6,8 +6,5 @@ class CreateFactors < ActiveRecord::Migration
 
       t.timestamps
     end
-	Factor.create name: 'budget', effect: 1
-	Factor.create name: 'video', effect: 1
-	Factor.create name: 'featured', effect:2
   end
 end
