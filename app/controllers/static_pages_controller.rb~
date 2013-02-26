@@ -30,7 +30,7 @@ class StaticPagesController < ApplicationController
      Factor.all.each do |factor|
        case factor.name
 	   when "budget"
-		   if project.pledge_percent<1000 
+		   if project.pledge_percent<Kicksafely::BUDGET_CONCERN
 			   localproject.score+=factor.effect
 		   end
 	   when "video"
@@ -48,6 +48,7 @@ class StaticPagesController < ApplicationController
      @projects << localproject
     end
 	@projects.sort! {|a,b| b.score <=> a.score }
+	# @projects=@projects[0..9]
   end
   
   def bp

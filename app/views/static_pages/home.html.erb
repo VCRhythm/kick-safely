@@ -31,13 +31,13 @@
 	  </dt>
           <div class="info-medals">
 			  <% if project.video %>
-				  <span class="badge">Vid</span>
+				  <span class="badge" data-toggle="tooltip" title="Project has a video, which increases likelihood of PROJECT FUNDING">Vid</span>
 			  <% end %>
 			  <% if project.featured %>
-				  <span class="badge">Feat</span>
+				  <span class="badge" data-toggle="tooltip" title="Project was featured, which increases likelihood of PROJECT FUNDING">Feat</span>
 			  <% end %>
-			  <% if project.pledge_percent<=200 %>
-				  <span class="badge">Budg</span>
+			  <% if project.pledge_percent<=Kicksafely::BUDGET_CONCERN %>
+				  <span class="badge" data-toggle="tooltip" title="Project funding is not significantly over budget, which increases likelihood of REWARD REDEMPTION">Budg</span>
 			  <% end %>
           </div>
         </div>
@@ -57,3 +57,7 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript"
+	$('.badge').tooltip();
+</script>
