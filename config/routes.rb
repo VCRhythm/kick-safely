@@ -5,8 +5,8 @@ Kicksafely::Application.routes.draw do
 	
   match '/about',	to: 'static_pages#about'
   match '/bp', 		to: 'static_pages#bp'
-  match '/bp-backers',	to: 'static_pages#bp-backers'
-  match '/bp-creator',	to: 'static_pages#bp-creators'
+  match '/bpbackers',	to: 'static_pages#bpbackers'
+  match '/bpcreators',	to: 'static_pages#bpcreators'
   resources :users
 
   resources :comments

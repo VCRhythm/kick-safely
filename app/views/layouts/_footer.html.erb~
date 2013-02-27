@@ -1,9 +1,8 @@
 <footer class="footer">
-  <a href="mailto:tristan@tristanhardy.com"><small>Tristan T. Hardy</small></a>
+<small><%= mail_to TTH_EMAIL, "Tristan T. Hardy", :encode=> "hex" %></small>
   <nav>
     <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", '#' %></li>
+      <li><%= mail_to "tristan@tristanhardy.com", "Contact" %></li>
     </ul>
   </nav>
 </footer>

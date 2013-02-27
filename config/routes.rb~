@@ -1,9 +1,12 @@
 Kicksafely::Application.routes.draw do
+  resources :factors
+
   root to: 'static_pages#home'
 	
   match '/about',	to: 'static_pages#about'
   match '/bp', 		to: 'static_pages#bp'
-
+  match '/bpbackers',	to: 'static_pages#bpbackers'
+  match '/bpcreator',	to: 'static_pages#bpcreators'
   resources :users
 
   resources :comments
