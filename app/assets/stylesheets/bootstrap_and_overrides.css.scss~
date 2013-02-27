@@ -62,7 +62,19 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
   }
-  
+/* forms */
+
+#error_explanation {
+	color: #f00;
+	ul{
+		list_style: none;
+		margin: 0 0 18px 0;
+	}
+}
+.field_with_errors {
+	@extend .control-group;
+	@extend .error;
+}
 /* page */
 
 .progress {
