@@ -1,69 +1,16 @@
 <% provide(:title, 'Home') %>
-<% counter=0 %>
-<% @projects.each do |project| %>
-	<% case project.score %>
-		<% when 4 %>
-			<div class="row-fluid project alert alert-success">
-		<% when 3 %>
-			<div class="row-fluid project alert alert-warning">
-		<% when 2 %>
-			<div class="row-fluid project alert alert-info">
-		<% when 0..1 %>
-			<div class="row-fluid project alert alert-error">
-	<% end %>
-    <div class="span1">
-      <div class="ranking">
-	<%= counter+=1 %>
-      </div>
-      <div class="category">
-        <%= project.category %>
-      </div>
-    </div>
-    <div class="span3 ksthumb">
-      <%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
-      <p><%= project.pledge_percent %>%</p><div class="progress"><div class="bar" style="width: <%= project.pledge_percent %>%"></div></div>
-    </div>
-	<div class="info span5">	
-      <dl>
-        <div class="info-header">
-          <dt class="info-title">
-	    <h2><%= link_to project.name, "http://www.kickstarter.com/projects/"+project.handle %></h2>
-	  </dt>
-          <div class="info-medals">
-			  <% if project.video %>
-				  <span class="badge" data-toggle="tooltip" title="Project has a video, which increases likelihood of PROJECT FUNDING">Vid</span>
-			  <% end %>
-			  <% if project.featured %>
-				  <span class="badge" data-toggle="tooltip" title="Project was featured, which increases likelihood of PROJECT FUNDING">Feat</span>
-			  <% end %>
-			  <% if project.pledge_percent<=Kicksafely::BUDGET_CONCERN %>
-				  <span class="badge" data-toggle="tooltip" title="Project funding is not significantly over budget, which increases likelihood of REWARD REDEMPTION">Budg</span>
-			  <% end %>
-          </div>
-        </div>
-        <dd class="info-desc">
-	  <%= project.description %>
-        </dd>
-      </dl>
-    </div>
-    <div class="span3 review">
-      <h3 class="review-title">
-		  Review
-      </h3>
-	  <p><%= project.score %></p>
-      <div class="review-comments">
-		  <% if project.comments.any? %>
-			<%= render @comments %>
-		<% end %>
-		
-      </div>
-	  <% if signed_in? %>
-		<button class="btn review-btn" type="button">Review</button>
- 	<% end %>
-    </div>
-  </div>
-<% end %>
+<% @counter=0 %>
+<%= render @projects %>
+	
 
-<script type="text/javascript"
+<script type="text/javascript">
 	$('.badge').tooltip();
+	$('.review-btn').click(function(){
+		$(this).parent().parent().children('.review-comments').hide();
+		$(this).parent().parent().children('.review-input').show();		
+	});	
+	$('.review-cancel').click(function(){
+		$(this).parent().parent().parent().children('.review-comments').show();
+		$(this).parent().parent('.review-input').hide();
+		});
 </script>

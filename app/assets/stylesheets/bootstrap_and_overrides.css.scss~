@@ -14,7 +14,7 @@ html {
 
 a{
 &:hover{
-background-color:transparent;
+	background-color:transparent;
 }}
 
 body {
@@ -35,6 +35,8 @@ textarea {
     margin-bottom: 10px;
   }
 }
+
+
 
 /* typography */
 
@@ -77,6 +79,13 @@ p {
 	@extend .error;
 }
 
+#new_comment{
+	margin-bottom:0;
+}
+
+#comment_content{
+	height: 60px;
+}
 
 /* page */
 
@@ -92,9 +101,13 @@ padding-left:20px;
 .project{
   border: solid 1px black;
   margin-bottom:10px;
-}
-.info-title h2{
-  margin-bottom:10px;
+  .review p{
+	font-size:30px;
+	margin: 10px 0;
+  }
+  .info-title h2{
+    margin-bottom:10px;
+  }
 }
 .category
   {
@@ -121,7 +134,10 @@ padding-left:20px;
   text-align:center;
   height:188px;
 .review-comments{
-	height:110px;
+	height:85px;
+}
+.review-input{
+	display:none;
 }
 }
 p {
