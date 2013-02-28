@@ -50,12 +50,16 @@
       <h3 class="review-title">
 		  Review
       </h3>
+	  <p><%= project.score %></p>
       <div class="review-comments">
-	      <p><%= project.score %></p>
 		  <% if project.comments.any? %>
 			<%= render @comments %>
 		<% end %>
+		
       </div>
+	  <% if signed_in? %>
+		<button class="btn review-btn" type="button">Review</button>
+ 	<% end %>
     </div>
   </div>
 <% end %>
