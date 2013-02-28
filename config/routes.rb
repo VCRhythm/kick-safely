@@ -12,7 +12,7 @@ Kicksafely::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :comments
+  resources :comments, only: [:create, :destroy]
 
   resources :projects
 

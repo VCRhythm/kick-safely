@@ -1,7 +1,6 @@
 # == Schema Information
 #
-# T:browse confirm e
-# able name: comments
+# Table name: comments
 #
 #  id         :integer          not null, primary key
 #  content    :string(255)
@@ -12,4 +11,11 @@
 #
 
 class Comment < ActiveRecord::Base
+	attr_accessible :content, :user_id, :project_id
+  belongs_to :user
+  belongs_to :project
+  validates :content, presence: true, length: {:maximum=>140}
+  validates :user_id, presence:true
+  validates :project_id, presence:true
+  default_scope order: 'comments.created_at DESC'
 end

@@ -14,6 +14,7 @@
 #  description    :text
 #  score          :integer
 #  video          :boolean
+#  featured       :boolean
 #
 
 require 'test_helper'

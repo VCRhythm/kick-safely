@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @projects=[]
+	@projects=[]
     localproject=nil
     @ksprojs = Kickstarter.by_list(:popular, :page=>1, :pages=>1)
     @recprojs = Kickstarter.by_list(:recommended, page: 1, pages: 1)

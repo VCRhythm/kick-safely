@@ -31,7 +31,7 @@
 	  </dt>
           <div class="info-medals">
 			  <% if project.video %>
-				  <span class="badge" data-toggle="tooltip" data-class="tooltip-home" title="Project has a video, which increases likelihood of PROJECT FUNDING">Vid</span>
+				  <span class="badge" data-toggle="tooltip" title="Project has a video, which increases likelihood of PROJECT FUNDING">Vid</span>
 			  <% end %>
 			  <% if project.featured %>
 				  <span class="badge" data-toggle="tooltip" title="Project was featured, which increases likelihood of PROJECT FUNDING">Feat</span>
@@ -52,7 +52,9 @@
       </h3>
       <div class="review-comments">
 	      <p><%= project.score %></p>
-		  <i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+		  <% if project.comments.any? %>
+			<%= render @comments %>
+		<% end %>
       </div>
     </div>
   </div>

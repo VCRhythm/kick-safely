@@ -52,7 +52,9 @@
       </h3>
       <div class="review-comments">
 	      <p><%= project.score %></p>
-		  <i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+		  <% if project.comments.any? %>
+			<%= render @comments %>
+		<% end %>
       </div>
     </div>
   </div>
