@@ -1,3 +1,4 @@
+<%= render 'projects/approval_form', project: project %>
 <%= form_for(current_user.comments.new) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
 	<div class="field">

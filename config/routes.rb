@@ -13,7 +13,7 @@ Kicksafely::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :comments, only: [:create, :destroy]
-
+  resources :approvals, only: [:create, :destroy]
   resources :projects
 
   # The priority is based upon order of creation:

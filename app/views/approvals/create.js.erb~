@@ -1,0 +1,1 @@
+$("#approval_form<%=@project.id%>").html("<%= escape_javascript(render('projects/unapprove', project:@project)) %>")

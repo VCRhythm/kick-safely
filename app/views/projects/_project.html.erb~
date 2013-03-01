@@ -15,10 +15,13 @@
     <div class="category">
         <%= project.category %>
     </div>
+	<div class="score">
+		<%= project.score %>
+	</div>
 </div>
 <div class="span3 ksthumb">
 	<%= image_tag(project.thumbnail_url, class: "img-rounded") %>	  
-    <p><%= project.pledge_percent %>%</p><div class="progress"><div class="bar" style="width: <%= project.pledge_percent %>%"></div></div>
+	<p><%= project.pledge_deadline %>: <%= project.pledge_percent %>%</p><div class="progress"><div class="bar" style="width: <%= project.pledge_percent %>%"></div></div>
 </div>
 <div class="info span5">	
     <dl>
@@ -44,8 +47,7 @@
 	</dl>
 </div>
 <div class="span3 review">
- 	<h3 class="review-title">Review</h3>
-	<p><%= project.score %></p>
+ 	<h4 class="review-title">Review</h4>
 	<div class="review-container">
 		<div class="review-comments">
 			<% if project.comments.any? %>
@@ -56,6 +58,7 @@
 			<% end %>
 		</div>
 		<div class="review-input">
+			<%= render "shared/comment_form", project: project %>
 		</div>
 	</div>
 </div>

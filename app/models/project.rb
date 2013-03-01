@@ -19,4 +19,5 @@
 
 class Project < ActiveRecord::Base
 	has_many :comments, dependent: :destroy
+	has_many :approvals, dependent: :destroy
 end

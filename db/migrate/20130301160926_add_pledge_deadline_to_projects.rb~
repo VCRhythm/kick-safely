@@ -1,0 +1,6 @@
+class AddPledgeDeadlineToProjects < ActiveRecord::Migration
+  def change
+    add_column :projects, :pledge_deadline, :string
+
+  end
+end

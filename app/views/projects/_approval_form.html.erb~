@@ -1,0 +1,7 @@
+<div id="approval_form">
+	<% if current_user.approve?(project.id) %>
+		<%= render 'projects/unapprove' %>
+	<% else %>
+		<%= render 'projects/approve' %>
+	<% end %>
+</div>

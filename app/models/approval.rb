@@ -1,0 +1,7 @@
+class Approval < ActiveRecord::Base
+	attr_accessible :project_id, :user_id
+	belongs_to :user
+	belongs_to :project
+	validates :user_id, presence: true
+	validates :project_id, presence: true
+end
