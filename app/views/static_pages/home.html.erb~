@@ -3,14 +3,4 @@
 <%= render @projects %>
 	
 
-<script type="text/javascript">
-	$('.badge').tooltip();
-	$('.review-btn').click(function(){
-		$(this).parent().parent().children('.review-comments').hide();
-		$(this).parent().parent().children('.review-input').show();		
-	});	
-	$('.review-cancel').click(function(){
-		$(this).parent().parent().parent().children('.review-comments').show();
-		$(this).parent().parent('.review-input').hide();
-		});
-</script>
+
