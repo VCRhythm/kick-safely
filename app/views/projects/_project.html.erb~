@@ -51,14 +51,16 @@
 	<div class="review-container">
 		<div class="review-comments">
 			<% if project.comments.any? %>
-				<%= render project.comments %>
+				<%= render project.comments, project: project %>
 			<% end %>
 			<% if signed_in? %>
 				<button class="btn review-btn" type="button">Review</button>
 			<% end %>
 		</div>
 		<div class="review-input">
-			<%= render "shared/comment_form", project: project %>
+      <% if signed_in? %>
+        <%= render "shared/comment_form", project: project %>
+      <% end %>
 		</div>
 	</div>
 </div>

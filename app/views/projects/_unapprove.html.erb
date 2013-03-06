@@ -1,3 +1,3 @@
 <%= form_for(current_user.approvals.find_by_project_id(project), html: {method: :delete}, remote: true) do |f| %>
-	<%= f.submit "Unapprove", class: "btn" %>
+	<%= f.submit "Unapprove", class: "btn btn-danger" %>
 <% end %>

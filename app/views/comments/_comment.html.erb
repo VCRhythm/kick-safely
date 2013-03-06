@@ -1,3 +1,4 @@
-<% User.find(comment.user_id).skills.each do |x| %>
-	<%= x.name %><i class="icon-briefcase"></i>
+<% user = User.find(comment.user_id) %>
+<% user.skills.each do |x| %>
+	<%= x.name %><i class="icon-briefcase<%= if !user.approvals.exists?(project_id: project.id) then ' icon-white' end %>" data-toggle="tooltip" title="<%= user.name + ": " + comment.content %>"></i>
 <% end %>

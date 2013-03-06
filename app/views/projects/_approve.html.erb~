@@ -1,4 +1,4 @@
-<%= form_for(current_user.approvals.build(project_id: @project.id), remote: true) do |f| %>
+<%= form_for(current_user.approvals.build(project_id: project.id), remote: true) do |f| %>
 	<div><%= f.hidden_field :project_id %></div>
-	<%= f.submit "Approve", class: "btn" %>
+	<%= f.submit "Approve", class: "btn btn-success" %>
 <% end %>

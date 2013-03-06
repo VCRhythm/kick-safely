@@ -51,7 +51,7 @@
 	<div class="review-container">
 		<div class="review-comments">
 			<% if project.comments.any? %>
-				<%= render project.comments %>
+				<%= render project.comments, project: project %>
 			<% end %>
 			<% if signed_in? %>
 				<button class="btn review-btn" type="button">Review</button>
