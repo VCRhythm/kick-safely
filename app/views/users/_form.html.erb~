@@ -16,6 +16,9 @@
     <%= f.label :password_confirmation, "Confirmation" %><br />
     <%= f.password_field :password_confirmation %>
   </div>
+  <div class="field">
+	  <%= f.label "Specialty" %><br />
+	  <%= f.select :skill_ids, Skill.all.collect {|p| [ p.name, p.id ]}, {:multiple=>true} %>
   <div class="actions">
     <%= f.submit "Create account", class: "btn btn-large btn-primary" %>
   </div>

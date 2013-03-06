@@ -8,3 +8,8 @@
 Factor.create name:'budget', effect:1
 Factor.create name:'featured', effect:2
 Factor.create name:'video', effect:1
+
+Skill.create name:'business'
+Skill.create name:'art'
+Skill.create name:'film'
+Skill.create name:'law'

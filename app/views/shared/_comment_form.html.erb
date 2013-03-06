@@ -1,9 +1,10 @@
 <%= render 'projects/approval_form', project: project %>
-<%= form_for(current_user.comments.new) do |f| %>
+<%= form_for(current_user.comments.new, remote: true) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
 	<div class="field">
 		<%= f.text_area :content, placeholder: "Comment..." %>
 	</div>
+	<%= f.hidden_field :project_id, value: project.id %>
 	<%= f.submit "Post", class: "btn btn-primary" %>
 	<button class="btn review-cancel" type="button">Cancel</button>
 <% end %>

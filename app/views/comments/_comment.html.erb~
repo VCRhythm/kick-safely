@@ -1,1 +1,3 @@
-<i class="icon-film"></i><i class="icon-music"></i><i class="icon-briefcase"></i>
+<% User.find(comment.user_id).skills.each do |x| %>
+	<%= x.name %><i class="icon-briefcase"></i>
+<% end %>

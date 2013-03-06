@@ -17,5 +17,6 @@ class Comment < ActiveRecord::Base
   validates :content, presence: true, length: {:maximum=>140}
   validates :user_id, presence:true
   validates :project_id, presence:true
+  validates_uniqueness_of :user_id, scope: :project_id
   default_scope order: 'comments.created_at DESC'
 end
