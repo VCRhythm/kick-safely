@@ -1,8 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
-	@projects=[]
+    @projects=[]
     localproject=nil
-    @ksprojs = Kickstarter.by_list(:popular, :page=>1, :pages=>1)
+    @ksprojs = Kickstarter.by_list(:popular, page: 1, pages: 1)
     @recprojs = Kickstarter.by_list(:recommended, page: 1, pages: 1)
     @ksprojs.each do |project|
 		hasvid=false
@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
 	   if video[0]["data-has-video"]=="true"
 		   hasvid=true
 	   end
-       localproject=Project.create(name: project.name, description: project.description, thumbnail_url: project.thumbnail_url, owner:project.owner, pledge_percent: project.pledge_percent, pledge_deadline: project.pledge_deadline, handle: project.handle, category: cat[0]["data-project-parent-category"], video:hasvid)
+       localproject=Project.create(name: project.name, description: project.description, thumbnail_url: project.thumbnail_url, owner:project.owner, pledge_percent: project.pledge_percent, handle: project.handle, category: cat[0]["data-project-parent-category"], video:hasvid)
 	 else
 	   if !localproject.video 
 		   doc=Nokogiri::HTML(open("http://www.kickstarter.com/projects/#{project.handle}"))
