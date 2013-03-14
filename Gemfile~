@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails'
 gem 'kickstarter', :git => 'git://github.com/VCRhythm/kickstarter.git' 
 
 # Bundle edge Rails instead:
@@ -20,7 +20,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
 
 group :production do
